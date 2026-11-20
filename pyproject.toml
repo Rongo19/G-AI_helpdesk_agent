@@ -1,0 +1,46 @@
+[project]
+name = "goaified-hr-it-helpdesk"
+version = "0.1.0"
+description = "hr/it helpdesk agent"
+readme = "README.md"
+authors = [
+    { name = "Rohan", email = "rohangorde0505@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.165.0",
+    "fastmcp>=4.2.3",
+    "langchain>=1.5.2",
+    "langchain-chroma>=1.1.0",
+    "langchain-community>=0.4.2",
+    "langchain-core>=1.8.4",
+    "langchain-groq>=1.2.1",
+    "langchain-huggingface>=1.2.3",
+    "langchain-text-splitters>=1.1.3",
+    "langgraph>=1.2.24",
+    "psycopg[binary,pool]>=3.3.9",
+    "pydantic-settings>=2.16.3",
+    "pypdf>=7.1.1",
+    "python-dotenv>=1.2.4",
+    "requests>=2.34.2",
+    "sentence-transformers>=6.3.0",
+    "streamlit>=1.67.0",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[project.scripts]
+dev = "app.main:run_dev"
+start = "app.main:run_server"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "ruff>=0.17.6",
+]

@@ -1,0 +1,61 @@
+COMPANY: GoAified Demo Organization
+DOCUMENT: IT Security Policy
+VERSION: 1.0
+
+1. Password Requirements
+
+Employees must use strong and unique passwords for company accounts.
+
+Passwords must contain at least 12 characters, including uppercase letters, lowercase letters, numbers, and special characters.
+
+Employees must not share passwords with other individuals.
+
+Employees should enable multi-factor authentication wherever available.
+
+2. Device Security
+
+Employees must protect company-issued laptops, phones, and other devices.
+
+Devices must be locked whenever they are unattended.
+
+Employees must install security updates regularly.
+
+Lost or stolen company devices must be reported to the IT support team immediately.
+
+Employees must not install unauthorized software on company devices.
+
+3. Data Protection
+
+Company information must only be stored and shared through approved systems.
+
+Employees must not disclose confidential information to unauthorized individuals.
+
+Sensitive information must be protected when accessing company systems outside the office.
+
+4. Phishing Prevention
+
+Employees must be careful when opening unexpected emails, links, and attachments.
+
+Employees must not share passwords or confidential information through suspicious websites or messages.
+
+Suspicious emails must be reported to the IT support team.
+
+Employees should verify unusual requests before responding.
+
+5. Security Incident Reporting
+
+Employees must immediately report suspected security incidents.
+
+Examples include phishing attacks, malware infections, unauthorized account access, and accidental data disclosure.
+
+Reports must be submitted through the designated IT helpdesk channel.
+
+Employees should provide relevant details about the incident.
+
+6. Employee Responsibilities
+
+All employees are responsible for following IT security guidelines.
+
+Employees must participate in security awareness training when required.
+
+Questions about security policies must be directed to the IT support team.

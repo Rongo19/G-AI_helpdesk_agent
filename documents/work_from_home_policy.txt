@@ -1,0 +1,43 @@
+COMPANY: GoAified Demo Organization
+DOCUMENT: Work From Home Policy
+VERSION: 1.0
+
+1. Eligibility
+
+Full-time employees whose roles can be performed remotely are eligible to request work-from-home arrangements.
+
+Eligibility depends on job responsibilities, performance, and team requirements.
+
+2. Approval Process
+
+Employees must submit work-from-home requests through the designated HR system.
+
+All requests require approval from the immediate manager.
+
+Approval may depend on business requirements and team availability.
+
+3. Remote Working Expectations
+
+Employees must remain available during their agreed working hours.
+
+Employees are expected to attend scheduled meetings and complete assigned tasks on time.
+
+Employees must regularly communicate their work progress to their managers.
+
+4. Workspace and Equipment
+
+Employees must maintain a safe and suitable remote workspace.
+
+Company devices must be used according to the IT Security Policy.
+
+Employees are responsible for protecting company information while working remotely.
+
+5. Changes and Exceptions
+
+Changes to approved work-from-home schedules must be discussed with the manager.
+
+Exceptions require approval from the department head or HR department.
+
+6. HR Support
+
+Employees can contact the HR department for questions about work-from-home eligibility and approval procedures.

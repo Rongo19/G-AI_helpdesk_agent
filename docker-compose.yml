@@ -1,0 +1,110 @@
+
+services:
+
+  # PostgreSQL database
+  postgres:
+    image: postgres:16
+    container_name: goaified-postgres
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+
+    ports:
+      - "127.0.0.1:5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./app/database/init.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
+
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+
+  # FastAPI backend and AI agent
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: goaified-api
+    restart: unless-stopped
+
+    command:
+      - uv
+      - run
+      - --no-sync
+      - uvicorn
+      - app.main:app
+      - --host
+      - 0.0.0.0
+      - --port
+      - "8000"
+
+    environment:
+      APP_ENV: production
+      DEBUG: "false"
+      GROQ_API_KEY: ${GROQ_API_KEY}
+      GROQ_MODEL: ${GROQ_MODEL:-openai/gpt-oss-120b}
+      DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
+
+    ports:
+      - "127.0.0.1:8000:8000"
+
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')"
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 90s
+
+
+  # Streamlit frontend
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: goaified-frontend
+    restart: unless-stopped
+
+    command:
+      - uv
+      - run
+      - --no-sync
+      - streamlit
+      - run
+      - app/ui.py
+      - --server.address
+      - 0.0.0.0
+      - --server.port
+      - "8501"
+
+    environment:
+      API_BASE_URL: http://api:8000
+
+    ports:
+      - "127.0.0.1:8501:8501"
+
+    depends_on:
+      api:
+        condition: service_healthy
+
+
+volumes:
+  postgres_data:

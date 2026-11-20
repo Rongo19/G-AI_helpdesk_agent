@@ -1,0 +1,49 @@
+COMPANY: GoAified Demo Organization
+DOCUMENT: Employee Handbook
+VERSION: 1.0
+
+1. Working Hours
+
+The standard working schedule is Monday to Friday, from 9:00 AM to 6:00 PM.
+
+Employees receive a one-hour lunch break during the workday.
+
+Different schedules may apply to certain roles with manager approval.
+
+2. Attendance
+
+Employees must arrive on time and follow their assigned working schedules.
+
+Daily attendance must be recorded through the designated attendance system.
+
+Employees who expect to arrive late or miss work must inform their immediate manager.
+
+3. Onboarding
+
+New employees must complete the organization's onboarding process.
+
+The onboarding process includes submitting employment documents, receiving company equipment, creating employee accounts, and attending orientation sessions.
+
+Managers are responsible for explaining initial job responsibilities.
+
+4. Workplace Conduct
+
+Employees must communicate respectfully and maintain professional behavior.
+
+Employees must cooperate with colleagues and complete assigned responsibilities.
+
+Confidential company information must not be shared with unauthorized individuals.
+
+5. HR Contact Procedures
+
+Employees can contact the HR department for questions regarding employment records, attendance, leave balances, onboarding, and workplace policies.
+
+HR requests must be submitted through the designated HR system or official communication channel.
+
+6. Policy Updates
+
+Employees are responsible for reading and following company policies.
+
+The organization may update its handbook when necessary.
+
+Employees will be informed about important policy changes through official communication channels.
